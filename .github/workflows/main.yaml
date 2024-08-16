@@ -52,7 +52,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-<<<<<<< HEAD
+
       - name: Install MacOS extra tools and add extra setup
         if: ${{ matrix.os == 'macos' }}
         run: |
@@ -76,8 +76,6 @@ jobs:
           sed -i s/python\ 3\.8/python\ ${{ matrix.python_version }}/ conda/dev.yaml
           cat conda/dev.yaml
 
-=======
->>>>>>> upstream/main
       - uses: conda-incubator/setup-miniconda@v3
         with:
           miniconda-version: "latest"
